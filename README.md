@@ -42,7 +42,7 @@ We trained our model in two different environments:
 
 Please refer to 'requirements.txt' for other dependencies.
 
-### 4. Train/Test by yourself
+### 4. Train/Test
 
 ```bash
 cd MultiTrans_extension
@@ -60,7 +60,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model -
 CUDA_VISIBLE_DEVICES=0 python test.py --dataset Synapse --Model_Name My_Model --bran_weights 0.4 0.3 0.2 0.1 --base_lr 0.1 --branch_depths 5 5 5 5 5 --branch_in_channels 256 256 256 256 256 --branch_key_channels 32 32 32 32 32 --Self_Attention_Name='ESA_MultiTrans' --seed 1294 --is_savenii=True
 ```
 
-### 5. Ablation experiments on the self-attention module.
+### 5. Ablation experiments on the self-attention module
 
 - We only provide examples of train scripts. Please replace the 'train.py' with 'test.py' for testing, and add '--is_savenii=True' for saving visualization results.
 
@@ -86,7 +86,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model -
 CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model --bran_weights 0.4 0.3 0.2 0.1 --base_lr 0.1 --branch_depths 5 5 5 5 5 --branch_in_channels 256 256 256 256 256 --branch_key_channels 32 32 32 32 32 --Self_Attention_Name='SSA' --one_kv_head False --share_kv False --seed 1294
 ```
 
-### 6. Ablation experiments on the Multi-branch design.
+### 6. Ablation experiments on the Multi-branch design
 
 - We only provide examples of train scripts. Please replace the 'train.py' with 'test.py' for testing, and add '--is_savenii=True' for saving visualization results.
 

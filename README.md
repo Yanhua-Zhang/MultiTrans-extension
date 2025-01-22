@@ -69,7 +69,9 @@ CUDA_VISIBLE_DEVICES=0 python test.py --dataset Synapse --Model_Name My_Model --
 
 ### 5. Ablation experiments on the self-attention module.
 
-- Remove the Head-sharing operation.
+- We only provide examples of the train script. Please replace the 'train.py' with 'test.py' for testing, and add '--is_savenii=True' for saving visualization results.
+
+- Remove the Head-sharing operation. 
 
 ```bash
 cd MultiTrans_extension
@@ -85,10 +87,30 @@ CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model -
 CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model --bran_weights 0.4 0.3 0.2 0.1 --base_lr 0.1 --branch_depths 5 5 5 5 5 --branch_in_channels 256 256 256 256 256 --branch_key_channels 32 32 32 32 32 --Self_Attention_Name='ESA_MultiTrans' --seed 1294 --share_kv='False' --marker='No_ProjectionShare'
 ```
 
-- Use the Standard self-attention.
+- Use the Standard self-attention. Need around 65 GB for training with our settings.
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model --bran_weights 0.4 0.3 0.2 0.1 --base_lr 0.1 --branch_depths 5 5 5 5 5 --branch_in_channels 256 256 256 256 256 --branch_key_channels 32 32 32 32 32 --Self_Attention_Name='SSA' --one_kv_head False --share_kv False --seed 1294
+```
+
+### 6. Ablation experiments on the Multi-branch design.
+
+- We only provide examples of the train script. Please replace the 'train.py' with 'test.py' for testing, and add '--is_savenii=True' for saving visualization results.
+
+- Use only one branch: --branch_choose 1 or 2 or 3 or 4
+
+```bash
+cd MultiTrans_extension
+```
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model --bran_weights 0.4 0.3 0.2 0.1 --base_lr 0.1 --branch_depths 5 5 5 5 5 --branch_in_channels 256 256 256 256 256 --branch_key_channels 32 32 32 32 32 --Self_Attention_Name='ESA_MultiTrans' --seed 1294 --branch_choose 1 --marker='Branch1'
+```
+
+- Remove one branch: --branch_choose 1 2 3 or 1 2 4 or 1 3 4 or 2 3 4
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model --bran_weights 0.4 0.3 0.2 0.1 --base_lr 0.1 --branch_depths 5 5 5 5 5 --branch_in_channels 256 256 256 256 256 --branch_key_channels 32 32 32 32 32 --Self_Attention_Name='ESA_MultiTrans' --seed 1294 --branch_choose 1 2 4 --marker='Branch124'
 ```
 
 ## Reference

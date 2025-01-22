@@ -1,5 +1,6 @@
 # MultiTrans
-This repository includes the official project of our paper accepted by the Computer Methods and Programs in Biomedicine. Title: "MultiTrans: Multi-Branch Transformer Network for Medical Image Segmentation".
+
+This repository includes the official project of our paper accepted by Computer Methods and Programs in Biomedicine. Title: "MultiTrans: Multi-Branch Transformer Network for Medical Image Segmentation".
 
 ## Usage
 

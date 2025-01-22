@@ -33,29 +33,23 @@ Download the preprocessed data and put it into the folder 'preprocessed_data'.
 
 ### 3. Environment
 
-We trained our model on one NVIDIA A800 (80GB) with the CUDA 11.7 and CUDNN 8500.
+We trained our model in two different environments:
+
+one NVIDIA GeForce GTX 3090 (24GB) with the CUDA 11.1 and CUDNN 8.0.
+
+- Python 3.8.13.
+
+- PyTorch 1.8.1. 
+
+one NVIDIA A800 (80GB) with the CUDA 11.7 and CUDNN 8500.
 
 - Python 3.8.13.
 
 - PyTorch 2.0.1. 
 
-- Please refer to 'requirements.txt' for other dependencies.
+Please refer to 'requirements.txt' for other dependencies.
 
-### 4. Test our trained model 
-
-- Download the trained model:[link](https://drive.google.com/file/d/1DDqsDNoWuvn8Uy9H4_qfNNXGJQK917UA/view?usp=drive_link). This trained model reached 84.82% DSC and 12.66 mm HD on the Synapse dataset, without using sophisticated data augmentation methods. 
-
-- Put 'epoch_149.pth' into this folder: 'Results/model_Trained/My_Model_Synapse224/Model/My_Model_pretrain_resnet50_Deep_V10_epo150_bs24_lr0.1_224_s1290'. Run the following order:
-
-```bash
-cd MultiTrans_extension
-```
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python test.py --dataset Synapse --Model_Name My_Model --bran_weights 0.4 0.3 0.2 0.1 --base_lr 0.1 --branch_depths 5 5 5 5 5 --branch_in_channels 256 256 256 256 256 --branch_key_channels 32 32 32 32 32 --seed 1290
-```
-
-### 5. Train/Test by yourself
+### 4. Train/Test by yourself
 
 ```bash
 cd MultiTrans_extension
@@ -64,13 +58,13 @@ cd MultiTrans_extension
 - Run the train script.
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model --bran_weights 0.4 0.3 0.2 0.1 --base_lr 0.1 --branch_depths 5 5 5 5 5 --branch_in_channels 256 256 256 256 256 --branch_key_channels 32 32 32 32 32 --seed 1290
+CUDA_VISIBLE_DEVICES=1 python train.py --dataset Synapse --Model_Name My_Model --bran_weights 0.4 0.3 0.2 0.1 --base_lr 0.1 --branch_depths 5 5 5 5 5 --branch_in_channels 256 256 256 256 256 --branch_key_channels 32 32 32 32 32 --Self_Attention_Name='ESA_MultiTrans' --seed 1294
 ```
 
 - Run the test script.
 
 ```bash
-CUDA_VISIBLE_DEVICES=0 python test.py --dataset Synapse --Model_Name My_Model --bran_weights 0.4 0.3 0.2 0.1 --base_lr 0.1 --branch_depths 5 5 5 5 5 --branch_in_channels 256 256 256 256 256 --branch_key_channels 32 32 32 32 32 --seed 1290
+CUDA_VISIBLE_DEVICES=1 python test.py --dataset Synapse --Model_Name My_Model --bran_weights 0.4 0.3 0.2 0.1 --base_lr 0.1 --branch_depths 5 5 5 5 5 --branch_in_channels 256 256 256 256 256 --branch_key_channels 32 32 32 32 32 --Self_Attention_Name='ESA_MultiTrans' --seed 1294 --is_savenii=True
 ```
 
 ## Reference

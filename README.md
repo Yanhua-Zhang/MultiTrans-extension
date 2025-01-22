@@ -68,22 +68,22 @@ CUDA_VISIBLE_DEVICES=0 python test.py --dataset Synapse --Model_Name My_Model --
 cd MultiTrans_extension
 ```
 
-- Remove the Head-sharing operation. 
+- Use the Standard self-attention. Need around 65 GB for training with our settings.
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model --bran_weights 0.4 0.3 0.2 0.1 --base_lr 0.1 --branch_depths 5 5 5 5 5 --branch_in_channels 256 256 256 256 256 --branch_key_channels 32 32 32 32 32 --Self_Attention_Name='SSA' --one_kv_head False --share_kv False --seed 1294
+```
+
+- Disable the Head-sharing operation. 
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model --bran_weights 0.4 0.3 0.2 0.1 --base_lr 0.1 --branch_depths 5 5 5 5 5 --branch_in_channels 256 256 256 256 256 --branch_key_channels 32 32 32 32 32 --Self_Attention_Name='ESA_MultiTrans' --seed 1294 --one_kv_head='False' --marker='No_HeadShare'
 ```
 
-- Remove the Projection-sharing operation.
+- Disable the Projection-sharing operation.
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model --bran_weights 0.4 0.3 0.2 0.1 --base_lr 0.1 --branch_depths 5 5 5 5 5 --branch_in_channels 256 256 256 256 256 --branch_key_channels 32 32 32 32 32 --Self_Attention_Name='ESA_MultiTrans' --seed 1294 --share_kv='False' --marker='No_ProjectionShare'
-```
-
-- Use the Standard self-attention. Need around 65 GB for training with our settings.
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model --bran_weights 0.4 0.3 0.2 0.1 --base_lr 0.1 --branch_depths 5 5 5 5 5 --branch_in_channels 256 256 256 256 256 --branch_key_channels 32 32 32 32 32 --Self_Attention_Name='SSA' --one_kv_head False --share_kv False --seed 1294
 ```
 
 ### 6. Ablation experiments on the Multi-branch design

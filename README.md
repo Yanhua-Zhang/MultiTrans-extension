@@ -71,11 +71,11 @@ CUDA_VISIBLE_DEVICES=0 python test.py --dataset Synapse --Model_Name My_Model --
 
 - We only provide examples of the train script. Please replace the 'train.py' with 'test.py' for testing, and add '--is_savenii=True' for saving visualization results.
 
-- Remove the Head-sharing operation. 
-
 ```bash
 cd MultiTrans_extension
 ```
+
+- Remove the Head-sharing operation. 
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model --bran_weights 0.4 0.3 0.2 0.1 --base_lr 0.1 --branch_depths 5 5 5 5 5 --branch_in_channels 256 256 256 256 256 --branch_key_channels 32 32 32 32 32 --Self_Attention_Name='ESA_MultiTrans' --seed 1294 --one_kv_head='False' --marker='No_HeadShare'
@@ -97,11 +97,11 @@ CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model -
 
 - We only provide examples of the train script. Please replace the 'train.py' with 'test.py' for testing, and add '--is_savenii=True' for saving visualization results.
 
-- Use only one branch: --branch_choose 1 or 2 or 3 or 4
-
 ```bash
 cd MultiTrans_extension
 ```
+
+- Use only one branch: --branch_choose 1 or 2 or 3 or 4
 
 ```bash
 CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model --bran_weights 0.4 0.3 0.2 0.1 --base_lr 0.1 --branch_depths 5 5 5 5 5 --branch_in_channels 256 256 256 256 256 --branch_key_channels 32 32 32 32 32 --Self_Attention_Name='ESA_MultiTrans' --seed 1294 --branch_choose 1 --marker='Branch1'

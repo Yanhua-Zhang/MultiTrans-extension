@@ -1,11 +1,11 @@
 # MultiTrans
-This repository includes the official project of our paper submitted to Computer Methods and Programs in Biomedicine. Title: "MultiTrans: Multi-Branch Transformer Network for Medical Image Segmentation".
+This repository includes the official project of our paper accepted by the Computer Methods and Programs in Biomedicine. Title: "MultiTrans: Multi-Branch Transformer Network for Medical Image Segmentation".
 
 ## Usage
 
 ### 0. To be noted:
 
-- We will gradually optimize the code to make it more readable and standardized.
+- This is the optimized version of our previously released code ([link](https://github.com/Yanhua-Zhang/MultiTrans-extension-old)).
 
 - If you have any suggestions for improvement or encounter any issues while using this code, please feel free to contact me: yanhuazhang@mail.nwpu.edu.cn
 
@@ -35,17 +35,9 @@ Download the preprocessed data and put it into the folder 'preprocessed_data'.
 
 We trained our model in two different environments:
 
-one NVIDIA GeForce GTX 3090 (24GB) with the CUDA 11.1 and CUDNN 8.0.
+- one NVIDIA GeForce GTX 3090 (24GB) with the CUDA 11.1 and CUDNN 8.0, Python 3.8.13, PyTorch 1.8.1.
 
-- Python 3.8.13.
-
-- PyTorch 1.8.1. 
-
-one NVIDIA A800 (80GB) with the CUDA 11.7 and CUDNN 8500.
-
-- Python 3.8.13.
-
-- PyTorch 2.0.1. 
+- one NVIDIA A800 (80GB) with the CUDA 11.7 and CUDNN 8500, Python 3.8.13, PyTorch 2.0.1.
 
 Please refer to 'requirements.txt' for other dependencies.
 
@@ -119,7 +111,12 @@ CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model -
 ## Citations
 
 ```bibtex
-
-xxx
-
+@article{zhang2024multitrans,
+  title={MultiTrans: Multi-branch transformer network for medical image segmentation},
+  author={Zhang, Yanhua and Balestra, Gabriella and Zhang, Ke and Wang, Jingyu and Rosati, Samanta and Giannini, Valentina},
+  journal={Computer Methods and Programs in Biomedicine},
+  pages={108280},
+  year={2024},
+  publisher={Elsevier}
+}
 ```

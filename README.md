@@ -10,6 +10,8 @@ This repository includes the official project of our paper accepted by Computer 
 
 - All default settings for the configuration of the MultiTrans network architecture are provided in: MultiTrans_extension/networks_my/configs_My_Model.py
 
+- Code of the proposed efficient self-attention: MultiTrans_extension/networks_my/module/module_Transformer.py
+
 - If you have any suggestions for improvement or encounter any issues, please feel free to contact me: yanhuazhang@mail.nwpu.edu.cn or yanhuazhang2000@gmail.com
 
 ### 1. Download pre-trained Resnet models

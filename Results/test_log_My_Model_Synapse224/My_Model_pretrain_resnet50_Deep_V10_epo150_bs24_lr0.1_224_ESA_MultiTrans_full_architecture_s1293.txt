@@ -1,0 +1,24 @@
+[04:38:42.905] Namespace(Dataset=<class 'datasets.dataset_synapse.Synapse_dataset'>, Drop_path_rate_Trans=None, Dropout_Rate_CNN=None, Dropout_Rate_Local_Global_Fusion=None, Dropout_Rate_Multi_branch_fusion=0.1, Dropout_Rate_Pos=None, Dropout_Rate_SegHead=0.1, Dropout_Rate_Trans=0, Dropout_Rate_UNet=None, If_Deep_Supervision=True, If_Local_GLobal_Fuison=True, If_Multiscale_Train=True, If_attention_scale=False, If_backbone_use_Stoch_Depth=False, If_binary_prediction=False, If_in_deep_sup=True, If_out_side=True, If_pretrained=True, If_remove_Norm=False, If_remove_ReLU=False, If_use_UNet_decoder=False, If_use_UNet_fusion_stage_features=True, If_use_position_embedding=True, If_weight_init=False, Local_Global_fusion_method='Attention_Gate', Model_Name='My_Model', Multi_branch_concat_fusion=False, Scale_Choose='Scale_L', Self_Attention_Name='ESA_MultiTrans', backbone='resnet50_Deep', base_lr=0.1, batch_size=24, bran_weights=[0.4, 0.3, 0.2, 0.1], branch_choose=None, branch_depths=[5, 5, 5, 5, 5], branch_in_channels=[256, 256, 256, 256, 256], branch_key_channels=[32, 32, 32, 32, 32], branch_num_heads=None, branch_out_channels=None, dataset='Synapse', deterministic=1, exp='My_Model_Synapse224', grad_clip=0.5, if_sum_fusion=True, img_size=224, img_size_width=224, is_deconv=False, is_pretrain=True, is_savenii=False, list_dir='./lists/lists_Synapse', loss_name='ce_dice_loss', marker='full_architecture', max_epochs=150, max_iterations=30000, momentum=0.9, n_gpu=1, name_position_method='Sinusoid', num_classes=9, one_kv_head=True, optimizer='SGD', seed=1293, share_kv=True, test_save_dir='../predictions', use_dilation=False, volume_path='../preprocessed_data/Synapse/test_vol_h5', weight_decay=0.0001, z_spacing=1)
+[04:38:42.906] My_Model_pretrain_resnet50_Deep_V10_epo150_bs24_lr0.1_224_ESA_MultiTrans_full_architecture_s1293
+[04:38:42.906] 12 test iterations per epoch
+[04:40:44.221] idx 0 case case0008 mean_dice 0.658210 mean_hd95 13.595284
+[04:41:55.111] idx 1 case case0022 mean_dice 0.898774 mean_hd95 7.799322
+[04:43:13.775] idx 2 case case0038 mean_dice 0.854893 mean_hd95 8.023701
+[04:45:51.489] idx 3 case case0036 mean_dice 0.869298 mean_hd95 15.646930
+[04:47:51.684] idx 4 case case0032 mean_dice 0.900335 mean_hd95 8.840449
+[04:49:41.990] idx 5 case case0002 mean_dice 0.889293 mean_hd95 4.539225
+[04:50:58.676] idx 6 case case0029 mean_dice 0.830411 mean_hd95 5.833388
+[04:53:45.613] idx 7 case case0003 mean_dice 0.772024 mean_hd95 93.152841
+[04:55:46.661] idx 8 case case0001 mean_dice 0.848491 mean_hd95 12.432768
+[04:57:38.559] idx 9 case case0004 mean_dice 0.810726 mean_hd95 9.692340
+[04:58:44.187] idx 10 case case0025 mean_dice 0.881127 mean_hd95 21.106581
+[04:59:48.288] idx 11 case case0035 mean_dice 0.908801 mean_hd95 2.330721
+[04:59:48.407] Mean class 1 mean_dice 0.890059 mean_hd95 8.617167
+[04:59:48.407] Mean class 2 mean_dice 0.746069 mean_hd95 28.682152
+[04:59:48.407] Mean class 3 mean_dice 0.852287 mean_hd95 31.643742
+[04:59:48.407] Mean class 4 mean_dice 0.837588 mean_hd95 23.233478
+[04:59:48.407] Mean class 5 mean_dice 0.946136 mean_hd95 13.022371
+[04:59:48.407] Mean class 6 mean_dice 0.689972 mean_hd95 7.976042
+[04:59:48.407] Mean class 7 mean_dice 0.936427 mean_hd95 8.976395
+[04:59:48.407] Mean class 8 mean_dice 0.849716 mean_hd95 13.177687
+[04:59:48.407] Testing performance in best val model: mean_dice : 0.843532 mean_hd95 : 16.916129

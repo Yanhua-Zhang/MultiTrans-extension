@@ -62,7 +62,7 @@ CUDA_VISIBLE_DEVICES=0 python test.py --dataset Synapse --Model_Name My_Model --
 
 ### 5. Ablation experiments on the self-attention module.
 
-- We only provide examples of the train script. Please replace the 'train.py' with 'test.py' for testing, and add '--is_savenii=True' for saving visualization results.
+- We only provide examples of train scripts. Please replace the 'train.py' with 'test.py' for testing, and add '--is_savenii=True' for saving visualization results.
 
 ```bash
 cd MultiTrans_extension
@@ -88,7 +88,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model -
 
 ### 6. Ablation experiments on the Multi-branch design.
 
-- We only provide examples of the train script. Please replace the 'train.py' with 'test.py' for testing, and add '--is_savenii=True' for saving visualization results.
+- We only provide examples of train scripts. Please replace the 'train.py' with 'test.py' for testing, and add '--is_savenii=True' for saving visualization results.
 
 ```bash
 cd MultiTrans_extension

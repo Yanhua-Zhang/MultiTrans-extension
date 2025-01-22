@@ -35,9 +35,9 @@ Download the preprocessed data and put it into the folder 'preprocessed_data'.
 
 We trained our model in two different environments:
 
-- one NVIDIA GeForce GTX 3090 (24GB) with the CUDA 11.1 and CUDNN 8.0, Python 3.8.13, PyTorch 1.8.1.
+- one NVIDIA GeForce GTX 3090 (24GB) with CUDA 11.1, CUDNN 8.0, Python 3.8.13, and PyTorch 1.8.1.
 
-- one NVIDIA A800 (80GB) with the CUDA 11.7 and CUDNN 8500, Python 3.8.13, PyTorch 2.0.1.
+- one NVIDIA A800 (80GB) with CUDA 11.7, CUDNN 8500, Python 3.8.13, and PyTorch 2.0.1.
 
 Please refer to 'requirements.txt' for other dependencies.
 
@@ -106,6 +106,7 @@ CUDA_VISIBLE_DEVICES=0 python train.py --dataset Synapse --Model_Name My_Model -
 ```
 
 ## Reference
+
 * [TransUNet](https://github.com/Beckschen/TransUNet)
 
 ## Citations

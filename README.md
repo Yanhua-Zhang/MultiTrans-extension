@@ -8,7 +8,7 @@ This repository includes the official project of our paper accepted by Computer 
 
 - This is the optimized version of our previously released code ([link](https://github.com/Yanhua-Zhang/MultiTrans-extension-old)).
 
-- If you have any suggestions for improvement or encounter any issues while using this code, please feel free to contact me: yanhuazhang@mail.nwpu.edu.cn
+- If you have any suggestions for improvement or encounter any issues, please feel free to contact me: yanhuazhang@mail.nwpu.edu.cn
 
 ### 1. Download pre-trained Resnet models
 

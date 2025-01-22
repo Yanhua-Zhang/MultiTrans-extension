@@ -38,7 +38,7 @@ Download the preprocessed data and put it into the folder 'preprocessed_data'.
 
 ### 3. Environment
 
-We trained our model in two different environments:
+We have tried our model in two different environments:
 
 - one NVIDIA GeForce GTX 3090 (24GB) with CUDA 11.1, CUDNN 8.0, Python 3.8.13, and PyTorch 1.8.1.
 

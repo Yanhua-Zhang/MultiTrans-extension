@@ -498,5 +498,9 @@ def test_RGB_image(args, image, label, net, classes, test_save_path=None, case=N
         
     return metric_list
 
-
+# -----------------------------------------------------------------------------
+# for the bool input of argparse
+def str2bool(str):
+    return True if str.lower() == 'true' else False
+    
 # -----------------------------------------------------------------------------
